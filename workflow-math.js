@@ -1,0 +1,10 @@
+/* Pure operations shared by editor workflows. */
+const PixelWorkflowMath={
+ tagRange(tag,count,delta,edge='move'){const last=Math.max(0,count-1),length=tag.to-tag.from+1;if(edge==='start')return {from:Math.max(0,Math.min(tag.to,tag.from+delta)),to:tag.to};if(edge==='end')return {from:tag.from,to:Math.max(tag.from,Math.min(last,tag.to+delta))};const from=Math.max(0,Math.min(count-length,tag.from+delta));return {from,to:from+length-1}},
+ combineMasks(a,b,mode='replace'){if(!a||mode==='replace')return b.slice();const out=new Uint8Array(b.length);for(let i=0;i<out.length;i++)out[i]=mode==='add'?!!(a[i]||b[i]):mode==='subtract'?!!(a[i]&&!b[i]):!!(a[i]&&b[i]);return out},
+ moveFrames(count,selected,target,after=false){const picked=Array.from(new Set(selected)).filter(i=>i>=0&&i<count).sort((a,b)=>a-b),rest=Array.from({length:count},(_,i)=>i).filter(i=>!picked.includes(i));let at=target+(after?1:0);at-=picked.filter(i=>i<at).length;rest.splice(Math.max(0,Math.min(rest.length,at)),0,...picked);return rest},
+ remapTags(tags,order,nextId){const output=[];for(const tag of tags){const hits=order.map((old,i)=>old>=tag.from&&old<=tag.to?i:-1).filter(i=>i>=0);let start=null,end=null,first=true;const flush=()=>{if(start===null)return;output.push({...tag,id:first?tag.id:nextId++,from:start,to:end});first=false};for(const i of hits){if(start===null)start=end=i;else if(i===end+1)end=i;else{flush();start=end=i}}flush()}return {tags:output,nextId}},
+ duration(value,fps=8){return Number.isFinite(value)&&value>=10?Math.min(60000,value):1000/Math.max(1,fps)},
+ paintPoints(x,y,width,height,horizontal,vertical,wrap){if(wrap){x=(x%width+width)%width;y=(y%height+height)%height}if(x<0||y<0||x>=width||y>=height)return [];const points=[[x,y]];if(horizontal)points.push([width-1-x,y]);if(vertical)points.push([x,height-1-y]);if(horizontal&&vertical)points.push([width-1-x,height-1-y]);return [...new Map(points.map(p=>[p[1]*width+p[0],p])).values()]}
+};
+if(typeof module!=='undefined')module.exports=PixelWorkflowMath;
