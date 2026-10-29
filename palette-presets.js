@@ -15,6 +15,22 @@ const pixelPalettePresets=[
  ['Océano profundo','Abisales, espuma y corales luminosos','102b42 17435b 235f75 337f8c 53a2aa 83c6c6 b8e3da e9f5e3 343759 59547f 8d7da3 bbadca 9e5268 d57e84 f2b2a0 f4dbbd'],
  ['Desierto mágico','Dunas doradas y oasis de turquesa','392b40 604054 8a5867 b5797d dca08c f0c49d f8e1b3 fbf0d4 6b4939 a17047 d7a25d ecca7c 28565b 488b89 86bbb0 c1ddc1'],
  ['Aurora polar','Verde boreal, hielo y violeta profundo','14283d 243d58 3b5975 617a94 96abbc cad9df eaf1ec f9fae8 26544f 398477 63b59a a3dbc0 514368 7f6598 af95bf decbe3'],
- ['Caramelo pastel','Fresa, pistacho y crema con sombras suaves','40364f 6c5778 9b81a2 c5a8c7 e6cedf f7e9eb fff5df d6b49c f0cda9 936b80 c98ea0 eeb4bc 628b86 94bab0 c9dfc4 b4c7e5']
+ ['Caramelo pastel','Fresa, pistacho y crema con sombras suaves','40364f 6c5778 9b81a2 c5a8c7 e6cedf f7e9eb fff5df d6b49c f0cda9 936b80 c98ea0 eeb4bc 628b86 94bab0 c9dfc4 b4c7e5'],
+ ["Arcade explosivo","Saturación máxima · acción y recreativas","101026 29205e 5732ab 9146ff d953ff ff318c ff493c ff892e ffc738 f8ff68 6ae64a 15ab64 09c2b9 31e5ff 348bff 2550bc 723537 c86d45 ffbe9d fff5e6"],
+ ["Terror gótico","Sangre, piedra fría y luz de vela","111017 25212d 3c3448 584c61 78697c 9d8999 c3afbb e5d4cf 310f25 581b32 8a2940 bd494b d77b68 453e32 6b634b a19b72 d5c795 233d42 426265 79918a"],
+ ["Horror tóxico","Ciénagas venenosas y verdes enfermizos","101a16 253026 3c4930 586139 7f8446 a7ad56 d3d56b f0ec9b 182e36 2b4c50 447069 73927c 3b2344 67405d 9b6578 cf9b99 4a2622 813e2b bd6b38 e6a359"],
+ ["Cozy cottage","Lana, madera cálida y jardín suave","302b35 554650 7d6267 a98583 d1aaa0 e9cdc0 f8e7d5 fff6e8 42584d 6a8064 98a78a c4cfaa 575a76 8585a1 b4aec6 dcd2e1 925b48 c78e60 e7ba7b f4d99e"],
+ ["Cozy invierno","Nieve azulada, chocolate y luces cálidas","263342 46576a 6c8093 9baebd cad9df eff5ef 423137 70504b a87a64 d5aa87 f5d6ad fff0cf 443b61 75668d a89ab9 d4c9dc 325a5a 5a8882 91b5a2 c4d9bc"],
+ ["JRPG cristal","Cristales luminosos, magia y ciudades celestes","171c3e 2c326b 454fa1 647bd2 93b4eb c7e5f2 f3fcf6 273e55 316d7a 45a599 82d5b7 c3f0d4 53335f 91507f cb79a0 f1b3bf 8b542f c59145 efc866 fff0ac 78384c ba5660 eb8d7c f8c9ab"],
+ ["JRPG ocaso","Aventura épica bajo un cielo naranja","242139 443553 6b4c70 986d8c c298ab e7c5cc f8e8de 623848 9b4d54 d36a57 f39663 f8c17e fce1a8 283f57 3b6382 5b91a5 94c2c3 345349 56815b 89b170 bed49b 855e3a b58b51 dfb977"],
+ ["RPG mazmorra","Hierro, cuero, musgo y tesoros","191d25 303744 4c5765 707d86 9ca6a7 c8cfbf e9e8cf 382b28 624536 926446 bf925c e5c181 273d35 425e44 6c8357 a6b47b 42283e 70465a a4737b d1a5a0 76362e b45638 e88b48"],
+ ["RPG pradera","Rutas verdes, aldeas y cielo abierto","20364a 365c77 508cab 7ebfce bde5df eff9e7 244a3d 3c7147 61a451 98cf6a d4ec9b 604333 936448 c08f61 e7bc88 f9ddb0 663c5b 9a5f7d cf91a0 f0c6c4 9d823d d9bd62 f6e59d"],
+ ["Polvo y memoria","Desaturada · ruinas y relatos melancólicos","292c32 45474c 63646a 85858a a9a7a8 cbc7c2 e7dfd4 f6eee1 4f5754 768077 a0aa98 c9ceba 55566b 7b7b8f a6a4b4 cdc8d2 775a58 a17c72 c4a494 e3cdb8"],
+ ["Pop tropical","Frutas, playa y contrastes intensos","182c56 284fa1 398be2 63d9f2 adf8e9 fffff0 174e3d 16834a 4ac850 a7ed56 7b2456 c4317b f654a0 ff9ec2 a73527 ed5931 ff9a3d ffda50 763b8d b669ce e6b4ed"],
+ ["Cyber lluvia","Asfalto oscuro y señales eléctricas","0d1424 18263d 2a3d59 465a76 73819a a4b2c4 e1edf0 173e55 146c88 16abc1 5af2eb 492755 872b83 ce3daf ff7bd4 7d372e c65c35 ff9b38 f9ed7c 536329 94ad3d d5ed6e"],
+ ["Brujería lunar","Lavanda, amatista y hierbas de medianoche","18182d 302747 4d3965 725486 9b7ca9 c9add2 ead8eb f8eef2 224744 3a7160 64a081 a4cfac 704254 a76a7d d69ba6 f0c5c5 806b45 b5a16a e4d49a f9efc7"],
+ ["Dulcería pastel","Macarons, algodón de azúcar y sombras suaves","55465c 83718a b39db7 d9c4da f3e3ef fff7ee 986b80 c996ae efbdd0 f9dce6 718d8b a1bcb1 cde1c8 e8f2dc 7e91ad abc0d4 d3e3ee b3936b dac29a f4e3bf"],
+ ["Volcán infernal","Lava incandescente y basalto violeta","171323 2e2239 49314d 68445f 8e6379 bd8b9b e5bdc4 f8e3dc 4e192a 84262f bd3930 ee5c29 ff8b32 ffc04b ffea8d 3c3547 605363 897783 b4a2a5"],
+ ["Bosque de lluvia","Verdes húmedos, flores y reflejos azulados","102d31 1c4746 2e6556 4b896a 79b28a b3d4ac e0edcc f6f4dc 1f3a53 345b78 5284a0 84b2c1 63445f 986b87 cb9caf edc9d0 7f5a3c b38a5b dfbc84 f1dba8"]
 ].map(([name,description,hex],index)=>({id:'preset-'+(index+1),name,description,colors:hex.split(' ').map(value=>'#'+value)}));
 if(typeof module!=='undefined')module.exports=pixelPalettePresets;
