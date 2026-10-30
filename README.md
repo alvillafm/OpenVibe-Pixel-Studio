@@ -19,7 +19,7 @@ The project is still in development, so expect bugs and unfinished features.
 
 ## Try it
 
-**[Open the editor](YOUR_APP_URL)**
+**[Open the editor](https://alvillafm.github.io/OpenVibe-Pixel-Studio/)**
 
 *Screenshot coming soon.*
 
